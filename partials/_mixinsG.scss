@@ -1,0 +1,47 @@
+@mixin borderStyle($radius: 25%, $shadow: 8px 4px 4px black, $border: 0px) {
+  border-radius: $radius;
+  box-shadow: $shadow;
+  border: $border;
+}
+
+@mixin gridFlex($value: 4) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  @if $value==1 {
+    .colGrid {
+      flex-basis: 100%;
+    }
+  } @else if $value==2 {
+    .colGrid {
+      flex-basis: 50%;
+    }
+  } @else if $value==3 {
+    .colGrid {
+      flex-basis: 33%;
+    }
+  }
+}
+
+@mixin animazione(
+  $duration: 0.5s,
+  $delay: 0s,
+  $start: -10px,
+  $name: fade-in-slide
+) {
+  opacity: 0;
+  transform: translateY(#{$start});
+  animation: #{$name} #{$duration} ease-in-out #{$delay} forwards;
+
+  @keyframes #{$name} {
+    0% {
+      opacity: 0;
+      transform: translateY(#{$start});
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

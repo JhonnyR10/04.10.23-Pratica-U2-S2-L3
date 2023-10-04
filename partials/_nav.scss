@@ -1,0 +1,13 @@
+nav {
+  display: block;
+
+  a {
+    text-decoration: none;
+    color: $colorText;
+  }
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

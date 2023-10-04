@@ -1,0 +1,34 @@
+header {
+  background-color: $colorBgHero;
+}
+.hero {
+  height: auto;
+
+  img {
+    @include borderStyle(30%, 8px 4px 4px black, 1px solid pink);
+    @include animazione(2s, 0s, -20px, immagine);
+  }
+  p {
+    color: $colorText;
+    @include animazione(2s, 0.5s, -25px, testo);
+  }
+}
+.heroContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  .col2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .b1 {
+    @include animazione(2s, 0.8s, -40px, bottone1);
+  }
+  .b2 {
+    @include animazione(2s, 1s, -40px, bottone2);
+  }
+  .b3 {
+    @include animazione(2s, 1.3s, -40px, bottone3);
+  }
+}

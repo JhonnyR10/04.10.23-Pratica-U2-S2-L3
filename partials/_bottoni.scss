@@ -1,0 +1,11 @@
+@each $Button, $color in $colors-map {
+  .colorB-#{$Button} {
+    background-color: $color;
+  }
+}
+
+button {
+  @include borderStyle(50%, 8px 4px 4px black);
+  padding: $paddingButton;
+  color: $colorText;
+}

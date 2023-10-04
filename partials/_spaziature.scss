@@ -1,0 +1,36 @@
+$margin-map: (
+  xs: 10px,
+  sm: 12px,
+  normal: 16px,
+  lg: 24px,
+  xl: 32px,
+  xxl: 48px,
+);
+@each $breakpoint, $value in $margin-map {
+  .m-#{$breakpoint} {
+    margin: $value;
+  }
+}
+
+$padding-map: (
+  xs: 1em,
+  sm: 1em,
+  normal: 1.5em,
+  lg: 2em,
+  xl: 2em,
+  xxl: 2.5em,
+);
+
+@each $breakpoint, $value in $padding-map {
+  .p-#{$breakpoint} {
+    padding: $value;
+  }
+}
+
+$paddingButton: 12px 20px;
+
+header,
+main {
+  max-width: 100%;
+  padding: 0 1em;
+}

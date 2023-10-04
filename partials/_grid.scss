@@ -1,0 +1,11 @@
+.gridContainer {
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+  @include gridFlex(4);
+  img {
+    @include borderStyle(15%, 6px 3px 3px black);
+  }
+}

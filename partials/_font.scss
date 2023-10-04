@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+$font-size-p: 18px;
+$font-size-nav: 14px;
+$font-size-button: 10px;
+
+@mixin titleBig {
+  font: {
+    size: 24px;
+    weight: 700;
+    family: "Montserrat", sans-serif;
+  }
+}
+
+h1 {
+  @include titleBig;
+  @include animazione(2s, 0.3s, -30px, titolo);
+}
+
+p {
+  font-size: $font-size-p;
+}
+
+li {
+  font-size: $font-size-nav;
+}
